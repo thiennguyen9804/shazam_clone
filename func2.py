@@ -41,7 +41,6 @@ def extract_peaks_all_frames(complex_arr):
         magnitude = np.abs(complex_arr[frame_idx])
         peaks = extract_peak_per_band(magnitude)  # [(band, max_val, freq_bin), ...]
         for band, max_val, freq_bin in peaks:
-            all_peaks.append((frame_idx, band, max_val, freq_bin))
-    
+            all_peaks.append((frame_idx, freq_bin, band, max_val,))
     return all_peaks
 

@@ -16,10 +16,10 @@ def frame_audio(signals):
     return frames
 
 
-def func1():
+def func1(file):
     process = (
         ffmpeg
-            .input('meikai.mp3')
+            .input(file)
             .output('pipe:', format='f32le', ac=1, ar=target_sr)
             .run_async(pipe_stdout=True, pipe_stderr=True)
     )
