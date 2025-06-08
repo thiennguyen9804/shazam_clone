@@ -1,7 +1,7 @@
 import ffmpeg
 import numpy as np
 
-target_sr = 22050
+target_sr = 44100
 frame_size = 2048
 hop_size = 512
 
